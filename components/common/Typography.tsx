@@ -26,7 +26,7 @@ export const H3: React.FC<TypographyProps> = ({ children, className = '' }) => (
 );
 
 export const H4: React.FC<TypographyProps> = ({ children, className = '' }) => (
-  <h4 className={`text-lg ${className}`}>
+  <h4 className={`text-lg font-semibold ${className}`}>
     {children}
   </h4>
 );

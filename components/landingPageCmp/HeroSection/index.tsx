@@ -2,9 +2,9 @@ import Image from "next/image"
 import Section from "@/components/common/Section"
 import { H1, H4, P } from "@/components/common/Typography"
 import { ButtonPrimary, ButtonSecondary } from "@/components/common/Button"
-import AnimatedDiv from "@/components/Animation/AnimatedDiv"
 import Stats from "./Stats"
 import ImageCard from "./ImageCard"
+import AnimatedHero from "@/components/Animation/AnimateHero"
 
 
 function index() {
@@ -12,7 +12,7 @@ function index() {
         <Section>
             <div className="container">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
-                    <AnimatedDiv className="space-y-8" >
+                    <AnimatedHero className="space-y-8" >
                         <P>Next-prodcast software,AirVocal</P>
                         <H1>A podcast creators and enterpeneurs</H1>
                         <H4 className="font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim arcu cursus tincidunt et odio enim aliquam. Gravida augue arcu duis</H4>
@@ -23,10 +23,10 @@ function index() {
                         <P>Recent engagement</P> 
                          <Stats />
 
-                    </AnimatedDiv>
+                    </AnimatedHero>
 
 
-                    <AnimatedDiv className="relative">
+                    <AnimatedHero className="relative">
                         <Image
                             src="/images/hero1.png"
                             width={600}
@@ -36,7 +36,7 @@ function index() {
                         />
                         {/* card that one on hero image */}
                         <ImageCard />
-                    </AnimatedDiv>
+                    </AnimatedHero>
                 </div>
             </div>
         </Section>

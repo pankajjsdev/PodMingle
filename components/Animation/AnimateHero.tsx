@@ -2,7 +2,7 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { ReactNode } from "react"
 
-const AnimatedDiv = ({ children, className = '' }: { children: ReactNode, className?: string }) => {
+const AnimatedHero = ({ children, className = '' }: { children: ReactNode, className?: string }) => {
 
     return (
         <AnimatePresence>
@@ -11,9 +11,9 @@ const AnimatedDiv = ({ children, className = '' }: { children: ReactNode, classN
                     hidden: { opacity: 0, y: 15 },
                     visible: { opacity: 1, y: 0 }
                 }}
-                transition={{ delay: 0.25, duration: 0.8, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 initial="hidden"
-                whileInView="visible"
+                animate="visible"
                 className={`${className}`}
             >
                 {children}
@@ -23,4 +23,4 @@ const AnimatedDiv = ({ children, className = '' }: { children: ReactNode, classN
 
 }
 
-export default AnimatedDiv
+export default AnimatedHero
