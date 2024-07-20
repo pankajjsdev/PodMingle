@@ -1,6 +1,6 @@
 'use client'
 import { motion } from "framer-motion"
-import { H1 } from "../common/Typography"
+import { H1 } from "@/components/common/Typography"
 
 function ImageCard() {
   return (

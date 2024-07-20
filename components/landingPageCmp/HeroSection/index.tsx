@@ -1,9 +1,9 @@
 import Image from "next/image"
-import Section from "../common/Section"
-import { H1, H4, P } from "../common/Typography"
-import { ButtonPrimary, ButtonSecondary } from "../common/Button"
-import AnimatedDiv from "../Animation/AnimatedDiv"
-import Stats from "./stats"
+import Section from "@/components/common/Section"
+import { H1, H4, P } from "@/components/common/Typography"
+import { ButtonPrimary, ButtonSecondary } from "@/components/common/Button"
+import AnimatedDiv from "@/components/Animation/AnimatedDiv"
+import Stats from "./Stats"
 import ImageCard from "./ImageCard"
 
 

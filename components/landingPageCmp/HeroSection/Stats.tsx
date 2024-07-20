@@ -1,10 +1,10 @@
 'use client'
 import CountUp from 'react-countup'
-import { H3 } from '../common/Typography'
+import { H3 } from '@/components/common/Typography'
 
 function Stats() {
     return (
-        <div className='lg:flex lg:space-x-4 items-center'>
+        <div className='w-full lg:flex lg:space-x-4 items-center'>
             <H3>
                 <CountUp
                     end={20}

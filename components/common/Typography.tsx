@@ -14,13 +14,13 @@ export const H1: React.FC<TypographyProps> = ({ children, className = '' }) => (
 );
 
 export const H2: React.FC<TypographyProps> = ({ children, className = '' }) => (
-  <h2 className={`text-h2 ${className}`}>
+  <h2 className={`text-h2 font-bold ${className}`}>
     {children}
   </h2>
 );
 
 export const H3: React.FC<TypographyProps> = ({ children, className = '' }) => (
-  <h3 className={`text-h3 ${className}`}>
+  <h3 className={`text-h3 font-bold ${className}`}>
     {children}
   </h3>
 );
