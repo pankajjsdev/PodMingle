@@ -2,32 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* :root {
+  --color-swatches--black-dark: #171717;
+  --button--background-color: var(--color-swatches--yellow);
+  --text-color--text-primary: var(--color-swatches--black-dark);
+  --background-color--background-whitesmoke: var(--color-swatches--whitesmoke);
+  --button--hover-text-color: var(--color-swatches--black-dark);
+  --text-color--text-alternate: var(--color-swatches--black-dark);
+  --background-color--background-tertiary: var(--color-swatches--light-grey);
+  --button--text-color: var(--color-swatches--white);
+  --background-color--background-secondary: var(--color-swatches--background-secondary);
+  --color-swatches--white: white;
+  --color-swatches--royal-blue: #0b6dff;
+  --color-swatches--dark-turquoise: #0be7ff;
+  --color-swatches--light-grey: #fffef9;
+  --text-color--text-secondary: var(--color-swatches--light-grey);
+  --background-color--background-primary: var(--color-swatches--white);
+  --background-color--background-blck-light: var(--color-swatches--black-light);
+  --background-color--background-alternate: var(--color-swatches--black-dark);
+  --link-color--link-primary: var(--color-swatches--royal-blue);
+  --background-color--background-success: var(--color-swatches--royal-blue);
+  --text-color--text-success: var(--color-swatches--royal-blue);
+  --border-color--border-primary: var(--color-swatches--royal-blue);
+  --border-color--border-secondary: var(--color-swatches--dark-turquoise);
+  --link-color--link-secondary: var(--color-swatches--dark-turquoise);
+  --text-color--text-error: var(--color-swatches--red);
+  --background-color--background-error: var(--color-swatches--red);
+  --color-swatches--red: #ff0808;
+  --button--hover-bg-color: var(--color-swatches--light-grey);
+  --color-swatches--yellow: #e9b90b;
+  --color-swatches--background-secondary: whitesmoke;
+  --color-swatches--black-light: #262626;
+  --color-swatches--whitesmoke: whitesmoke;
+} */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
