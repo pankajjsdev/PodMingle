@@ -1,9 +1,10 @@
-import React from 'react'
+import HeaderSection from "@/components/HeroSection"
+
 
 function page() {
     return (
         <main>
-            <h1>Helping...</h1>
+          <HeaderSection/>
 
         </main>
     )

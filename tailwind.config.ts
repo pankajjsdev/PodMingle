@@ -23,6 +23,7 @@ const config: Config = {
         'h2': '2.75rem', // 44px
         'h3': '2.25rem', // 36px
         'h4': '1.75rem', // 28px
+        'h5': '1rem', // 24px
       },
       colors: {
         'black-dark': '#171717',

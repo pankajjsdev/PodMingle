@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { ButtonPrimary, ButtonSecondary } from '../common/Button'
 import MobileNav from './MobileNav'
+import Image from 'next/image'
 
 const links = [
     { title: 'Home', path: '/' },
@@ -14,11 +15,19 @@ const links = [
 
 const Header = () => {
     return (
-        <header className='bg-white'>
-            <div className='container mx-auto p-4 flex items-center justify-between'>
+        <header className='bg-white mb-8'>
+            <div className='container  py-4 flex items-center justify-between'>
                 {/* Header logo */}
                 <h1 className='text-2xl font-bold'>
-                    <Link href="/">Logo</Link>
+                    <Link href="/">
+                    <Image
+                     src="/images/logo/logo.png"
+                     width = {120}
+                     height= {120}
+                     quality={100}
+                     alt=""
+                    />
+                    </Link>
                 </h1>
 
                 {/* Desktop Navigation and Action Buttons */}
