@@ -108,7 +108,7 @@ const footerLinks = [
 function index() {
     return (
         <footer className="bg-black-dark h-[40rem] py-8 text-white">
-            <div className="container">
+            <div className="container my-8">
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-3">
                     <div>
                         <Link href="/">

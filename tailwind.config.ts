@@ -10,18 +10,21 @@ const config: Config = {
     extend: {
       container: {
         center: true,
-        padding: '1rem',
+        padding: {
+          DEFAULT: '5%',
+        },
         screens: {
           sm: '100%',
           md: '100%',
-          lg: '1024px',
-          xl: '1280px',
+          // lg: '1024px',
+          // xl: '1280px',
         },
       },
       fontSize: {
         'h1': '3.25rem', // 52px
         'h2': '2.75rem', // 44px
-        'h3': '2.25rem', // 36px
+        'h3': '2.5rem', // 36px
+        'hs3': '2rem', // 36px
         'h4': '1.75rem', // 28px
         'h5': '1rem', // 24px
       },

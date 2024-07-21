@@ -7,8 +7,14 @@ interface TypographyProps {
   className?: string;
 }
 
+// 'h1': '3.25rem', // 52px
+// 'h2': '2.75rem', // 44px
+// 'h3': '2.25rem', // 36px
+// 'h4': '1.75rem', // 28px
+// 'h5': '1rem', // 24px
+
 export const H1: React.FC<TypographyProps> = ({ children, className = '' }) => (
-  <h1 className={`text-h1 font-bold ${className}`}>
+  <h1 className={`text-h3 lg:text-h1 font-bold leading-[1.2] ${className}`}>
     {children}
   </h1>
 );
@@ -20,7 +26,7 @@ export const H2: React.FC<TypographyProps> = ({ children, className = '' }) => (
 );
 
 export const H3: React.FC<TypographyProps> = ({ children, className = '' }) => (
-  <h3 className={`text-h3 font-bold ${className}`}>
+  <h3 className={`text-hs3 lg:text-h3 font-bold leading-[1.2] ${className}`}>
     {children}
   </h3>
 );
@@ -31,32 +37,8 @@ export const H4: React.FC<TypographyProps> = ({ children, className = '' }) => (
   </h4>
 );
 
-export const SectionHeader: React.FC<TypographyProps> = ({ children, className = '' }) => (
-  <div className={`text-styleguide-section-header ${className}`}>
-    {children}
-  </div>
-);
-
-export const HeadingMedium: React.FC<TypographyProps> = ({ children, className = '' }) => (
-  <div className={`text-styleguide-heading-medium ${className}`}>
-    {children}
-  </div>
-);
-
-export const HeadingLarge: React.FC<TypographyProps> = ({ children, className = '' }) => (
-  <div className={`text-styleguide-heading-large ${className}`}>
-    {children}
-  </div>
-);
-
-export const HeadingMediumCustom: React.FC<TypographyProps> = ({ children, className = '' }) => (
-  <div className={`text-heading-medium ${className}`}>
-    {children}
-  </div>
-);
-
 export const P: React.FC<TypographyProps> = ({ children, className = '' }) => (
-  <p className={`text-base ${className}`}>
+  <p className={`text-base lg:text-lg font-normal text-black-dark leading-[1.5] ${className}`}>
     {children}
   </p>
 );
