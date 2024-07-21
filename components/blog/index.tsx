@@ -33,7 +33,7 @@ function index() {
                     <H2>Articles & News</H2>
                     <ButtonPrimary title="Browse all article" />
                 </div>
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {
                         blogData?.map((blog, index) => {
                             return (

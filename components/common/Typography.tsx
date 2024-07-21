@@ -38,7 +38,7 @@ export const H4: React.FC<TypographyProps> = ({ children, className = '' }) => (
 );
 
 export const P: React.FC<TypographyProps> = ({ children, className = '' }) => (
-  <p className={`text-base lg:text-lg font-normal text-black-dark leading-[1.5] ${className}`}>
+  <p className={`text-base lg:text-lg font-normal leading-[1.5] ${className}`}>
     {children}
   </p>
 );

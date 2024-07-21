@@ -15,7 +15,7 @@ const links = [
 
 const Header = () => {
     return (
-        <header className='bg-white mb-8'>
+        <header className='bg-white'>
             <div className='container  py-4 flex items-center justify-between'>
                 {/* Header logo */}
                     <Link href="/">

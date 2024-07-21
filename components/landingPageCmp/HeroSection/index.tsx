@@ -11,16 +11,15 @@ function index() {
     return (
         <Section>
             <div className="container">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 space-y-6 lg:space-y-0">
                     <AnimatedHero className="space-y-6 lg:space-y-8 lg:p-8" >
                         <P>Next-prodcast software,AirVocal</P>
                         <H1>A podcast creators and enterpeneurs</H1>
                         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim arcu cursus tincidunt et odio enim aliquam. Gravida augue arcu duis</P>
-                        <div className=' flex flrx-col'>
+                        <div className='grid grid-cols-1 lg:grid-cols-3 gap-3'>
                             <ButtonPrimary title='Subscribe' />
                             <ButtonSecondary title='Last Episode' />
                         </div>
-                        <P>Recent engagement</P> 
                          <Stats />
                     </AnimatedHero>
                     <AnimatedHero className="relative">
