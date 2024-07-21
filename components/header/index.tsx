@@ -18,7 +18,6 @@ const Header = () => {
         <header className='bg-white mb-8'>
             <div className='container  py-4 flex items-center justify-between'>
                 {/* Header logo */}
-                <h1 className='text-2xl font-bold'>
                     <Link href="/">
                     <Image
                      src="/images/logo/logo.png"
@@ -28,8 +27,6 @@ const Header = () => {
                      alt=""
                     />
                     </Link>
-                </h1>
-
                 {/* Desktop Navigation and Action Buttons */}
                 <div className='lg:flex items-center space-x-8 hidden'>
                     <nav>

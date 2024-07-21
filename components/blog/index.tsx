@@ -40,7 +40,6 @@ function index() {
                                 <BlogCard key={index} blog={blog} />
                             )
                         })
-
                     }
                 </div>
                 <div></div>
