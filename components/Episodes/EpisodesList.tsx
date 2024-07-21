@@ -1,5 +1,7 @@
 import Section from "@/components/common/Section";
 import EpisodeCard from "./EpisodeCard";
+import AnimatedDiv from "../Animation/AnimatedDiv";
+import { ButtonPrimary, ButtonSecondary } from "../common/Button";
 
 
 const podcastList = [
@@ -154,7 +156,7 @@ const podcastList = [
 function EpisodesList() {
     return (
         <Section>
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <AnimatedDiv className="grid grid-cols-1 lg:grid-cols-4 gap-8">
                 {
                     podcastList.map((episode, index) => {
                         return (
@@ -162,6 +164,11 @@ function EpisodesList() {
                         )
                     })
                 }
+            </AnimatedDiv>
+
+            <div className="flex items-center justify-center my-8 space-x-6">
+            <ButtonPrimary title='Subscribe' />
+            <ButtonSecondary title='Last Episode' />
             </div>
         </Section>
     )
