@@ -2,6 +2,7 @@ import AboutOurShow from "@/components/landingPageCmp/OurShow/AboutOurShow";
 import HeaderSection from "@/components/landingPageCmp/HeroSection"
 import InfiniteScroll from "@/components/landingPageCmp/InfiniteScroll"
 import MainFeature from "@/components/landingPageCmp/MainFeatures"
+import EpisodsList from "@/components/Episodes/index"
 
 
 function page() {
@@ -11,7 +12,7 @@ function page() {
           <InfiniteScroll/>
           <AboutOurShow/>
           <MainFeature/>
-
+          <EpisodsList/>
         </main>
     )
 }

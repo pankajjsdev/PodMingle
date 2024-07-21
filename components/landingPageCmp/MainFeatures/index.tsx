@@ -4,7 +4,7 @@ import Image from "next/image"
 
 function index() {
     return (
-        <div className="bg-black-dark text-white py-28">
+        <div className="bg-black-dark text-white py-28 mb-8">
             <section className="container mb-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div className="space-y-8">
