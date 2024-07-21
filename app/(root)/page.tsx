@@ -6,6 +6,7 @@ import EpisodsList from "@/components/Episodes/index"
 import AdsOne from "@/components/landingPageCmp/AdsSections/AdsOne";
 import FAQ from "@/components/FAQ";
 import BlogList from "@/components/blog";
+import Testimonials from "@/components/landingPageCmp/Testimonials";
 
 
 function page() {
@@ -18,6 +19,7 @@ function page() {
           <EpisodsList/>
           <AdsOne/>
           <FAQ/>
+          <Testimonials/>
           <BlogList/>
         </main>
     )

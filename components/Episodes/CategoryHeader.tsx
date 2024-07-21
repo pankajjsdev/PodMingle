@@ -39,7 +39,7 @@ function CategoryHeader() {
                     {
                         EpisodsCategory?.map((category, index)=>{
                             return(
-                                <li className={`${pathname == category.path ? 'bg-yellow rounded-full p-4' : ''} hover:bg-yellow hover:rounded-full p-4 text-base`}>
+                                <li key={index} className={`${pathname == category.path ? 'bg-yellow rounded-full p-4' : ''} hover:bg-yellow hover:rounded-full p-4 text-base`}>
                                     <Link href={category.path}>{category.title}</Link>
                                 </li>
                             )
