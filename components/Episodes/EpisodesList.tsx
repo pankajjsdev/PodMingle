@@ -156,7 +156,7 @@ const podcastList = [
 function EpisodesList() {
     return (
         <Section>
-            <AnimatedDiv className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <AnimatedDiv className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {
                     podcastList.map((episode, index) => {
                         return (
@@ -166,8 +166,8 @@ function EpisodesList() {
                 }
             </AnimatedDiv>
 
-            <div className="flex items-center justify-center my-8 space-x-6">
-            <ButtonPrimary title='Subscribe' />
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-3 mt-16 items-center '>
+            <ButtonPrimary title='Subscribe'  />
             <ButtonSecondary title='Last Episode' />
             </div>
         </Section>

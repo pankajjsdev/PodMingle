@@ -44,7 +44,7 @@ function AboutOurShow() {
                             <P>About our show</P>
                             <H3>Awareness and Presence in Everyday Moments</H3>
                             <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim arcu cursus tincidunt et odio enim allium. Gravida augue arcu duis turpis nisl. Sed tellus quis nisl, est ridiculus. Gravida faucibus in ut hendrerit. Eget sed sit.</P>
-                            <div className='flex space-x-4'>
+                            <div className='grid grid-cols-1 lg:grid-cols-3 gap-3'>
                                 <ButtonPrimary title='Subscribe' />
                                 <ButtonSecondary title='Last Episode' />
                             </div>
