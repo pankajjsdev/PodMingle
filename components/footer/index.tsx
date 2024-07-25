@@ -78,7 +78,7 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-                <div className="my-8 flex flex-col sm:flex-row justify-between items-center">
+                <div className="mb-8 my-20 flex flex-col sm:flex-row justify-between items-center">
                     <p className="text-xs mb-4 sm:mb-0">&copy; 2024 Pod mingle. All rights reserved.</p>
                     <div className="flex space-x-6 mb-4 sm:mb-0">
                         <a href="#" className="text-xs">Privacy Policy</a>
