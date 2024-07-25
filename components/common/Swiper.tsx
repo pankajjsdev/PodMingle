@@ -59,14 +59,14 @@ const SwiperCmp: React.FC<SwiperProps> = ({ children }) => {
             <div className="absolute -bottom-28 right-10 flex space-x-4 m-4">
                 <button
                     onClick={handlePrev}
-                    className="bg-blue-500 rounded-full p-4 border shadow hover:bg-white group"
+                    className="bg-blue-500 rounded-full p-4 border shadow hover:bg-white hover:border-blue-500 group"
                 >
-                    <ArrowLeft className="text-blue-50 w-4 h-4 group-hover:text-blue-500" />
+                    <ArrowLeft className="text-blue-50 w-4 h-4 group-hover:text-blue-500 " />
                 </button>
 
                 <button
                     onClick={handleNext}
-                    className="bg-blue-500 p-4 rounded-full border shadow hover:bg-white group"
+                    className="bg-blue-500 p-4 rounded-full border shadow hover:bg-white hover:border-blue-500 group"
                 >
                     <ArrowRight className="text-blue-50 w-4 h-4 group-hover:text-blue-500" />
                 </button>
