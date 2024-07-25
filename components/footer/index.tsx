@@ -1,116 +1,13 @@
-import Image from "next/image"
-import Link from "next/link"
-import { H3, H4, P } from "../common/Typography"
-import { ButtonPrimary } from "../common/Button"
+import Image from "next/image";
+import Link from "next/link";
+import { ButtonPrimary } from "../common/Button";
 
-const footerLinks = [
-    {
-        heading: 'Menu',
-        links: [
-            {
-                title: 'Home',
-                path: '/'
-            },
-            {
-                title: 'About us',
-                path: '/about-us'
-            },
-            {
-                title: 'Episodes',
-                path: '/episods'
-            },
-            {
-                title: 'Blog',
-                path: '/blog'
-            },
-            {
-                title: 'Contact us',
-                path: '/contact-us'
-            },
-            {
-                title: 'Sign in',
-                path: '/sign-in'
-            },
-            {
-                title: 'Sign up',
-                path: '/sign-up'
-            }
-        ]
-    },
-    {
-        heading: 'Menu',
-        links: [
-            {
-                title: 'Home',
-                path: '/'
-            },
-            {
-                title: 'About us',
-                path: '/about-us'
-            },
-            {
-                title: 'Episodes',
-                path: '/episods'
-            },
-            {
-                title: 'Blog',
-                path: '/blog'
-            },
-            {
-                title: 'Contact us',
-                path: '/contact-us'
-            },
-            {
-                title: 'Sign in',
-                path: '/sign-in'
-            },
-            {
-                title: 'Sign up',
-                path: '/sign-up'
-            }
-        ]
-    },
-    {
-        heading: 'Menu',
-        links: [
-            {
-                title: 'Home',
-                path: '/'
-            },
-            {
-                title: 'About us',
-                path: '/about-us'
-            },
-            {
-                title: 'Episodes',
-                path: '/episods'
-            },
-            {
-                title: 'Blog',
-                path: '/blog'
-            },
-            {
-                title: 'Contact us',
-                path: '/contact-us'
-            },
-            {
-                title: 'Sign in',
-                path: '/sign-in'
-            },
-            {
-                title: 'Sign up',
-                path: '/sign-up'
-            }
-        ]
-    }
-]
-
-function index() {
+const Footer = () => {
     return (
-        <footer className="bg-black-dark h-[40rem] py-8 text-white">
-            <div className="container my-8">
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-3">
-                    <div>
+        <footer className="bg-black text-white py-20">
+            <div className="container">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-3">
+                    <div className="">
                         <Link href="/">
                             <Image
                                 src="/images/logo/logo.png"
@@ -122,49 +19,82 @@ function index() {
                             />
                         </Link>
                     </div>
-                    {
-                        footerLinks?.map((nav, index) => {
-                            return (
-                                <div key={index}>
-                                    <H4>{nav.heading}</H4>
-
-                                    <ul className="space-y-4 my-6">
-                                        {
-                                            nav.links.map((link, index2) => {
-                                                return (
-                                                    <li key={index2}>
-                                                        <Link className="text-lg font-normal " href={link.path}>{link.title}</Link>
-                                                    </li>
-                                                )
-                                            })
-                                        }
-                                    </ul>
-
-                                </div>
-                            )
-                        })
-                    }
                     <div>
-                        <div>
-                            <H4>Subscribe</H4>
-                            <P>Join our newsletter to stay up to date on features and releases</P>
-                            {/* <div className="flex items-center justify-center space-y-3 space-x-3">
-                                <input className="bg-black-dark h-14  px-4 border border-white rounded-full" placeholder="Enter your email" />
-                                <ButtonPrimary title="Subscribe" className="h-14" />
-                            </div> */}
-                            <p className="text-xs">By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
-                        </div>
+                        <h4 className="font-semibold">Menu</h4>
+                        <ul className="mt-4 space-y-2">
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li>Episodes</li>
+                            <li>Blog</li>
+                            <li>Pricing</li>
+                            <li>Contact Us</li>
+                            <li>Sign up</li>
+                            <li>Sign in</li>
+                        </ul>
                     </div>
+                    <div>
+                        <h4 className="font-semibold">CMS Page</h4>
+                        <ul className="mt-4 space-y-2">
+                            <li>Episodes details</li>
+                            <li>Blog details</li>
+                            <li>Team details</li>
+                            <li>Pricing details</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-semibold">Utility Page</h4>
+                        <ul className="mt-4 space-y-2">
+                            <li>Start Here</li>
+                            <li>Style Guide</li>
+                            <li>404 Not Found</li>
+                            <li>Password Protected</li>
+                            <li>Licenses</li>
+                            <li>Terms & Condition</li>
+                            <li>Privacy Policy</li>
+                            <li>Changelog</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-semibold">Subscribe</h4>
+                        <p className="mt-4">Join our newsletter to stay up to date on features and releases.</p>
+                        <form className="mt-4">
+                            <div className="space-y-8 border-b border-gray-700 py-2">
+                                <input
+                                    className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none mb-2 sm:mb-0"
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    aria-label="Email"
+                                />
+                                <ButtonPrimary
+                                    className="bg-yellow-500 hover:bg-yellow-600 text-white py-1 px-4 w-full rounded"
+                                    title="Subscribe"
+                                />
 
 
+                            </div>
+                        </form>
+                        <p className="mt-2 text-xs">
+                            By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.
+                        </p>
+                    </div>
+                </div>
+                <div className="my-8 flex flex-col sm:flex-row justify-between items-center">
+                    <p className="text-xs mb-4 sm:mb-0">&copy; 2024 Pod mingle. All rights reserved.</p>
+                    <div className="flex space-x-6 mb-4 sm:mb-0">
+                        <a href="#" className="text-xs">Privacy Policy</a>
+                        <a href="#" className="text-xs">Terms of Service</a>
+                        <a href="#" className="text-xs">Cookies Settings</a>
+                    </div>
+                    <div className="flex space-x-4">
+                        <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook"></i></a>
+                        <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i></a>
+                        <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i></a>
+                        <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
-
-
-            <p className="container mx-auto  text-sm">All copy reserved to Pod mingle Company. This includes all content, images, and intellectual property. Unauthorized use or reproduction is strictly prohibited. For permissions and licensing, please contact us at info@podmingle.com.</p>
-
         </footer>
-    )
-}
+    );
+};
 
-export default index
+export default Footer;

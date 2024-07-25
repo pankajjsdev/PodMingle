@@ -1,6 +1,5 @@
 'use client'
 import Link from "next/link"
-import Section from "../common/Section"
 import { H3, H4 } from "../common/Typography"
 import { usePathname } from "next/navigation"
 
@@ -31,7 +30,7 @@ const EpisodsCategory = [
 function CategoryHeader() {
     const pathname = usePathname()
     return (
-        <Section>
+        <section>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
                 <H3>All of our latest episodes</H3>
                 <div>
@@ -51,7 +50,7 @@ function CategoryHeader() {
                 </div>
             </div>
 
-        </Section>
+         </section>
     )
 }
 

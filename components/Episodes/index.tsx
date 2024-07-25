@@ -6,10 +6,9 @@ import EpisodesList from "./EpisodesList"
 function index() {
     return (
         <Section>
-            <div className="container mx-auto mb-8">
+            <div className="container mx-auto">
             <CategoryHeader/>
             </div>
-
             <div className="container mx-auto mb-8">
             <EpisodesList/>
             </div>

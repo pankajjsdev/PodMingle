@@ -13,7 +13,7 @@ import EpisodeHero from "@/components/Episodes/EpisodeHero";
 function page() {
     return (
         <main>
-            <EpisodeHero/>
+         <EpisodeHero/>
           <EpisodsList/>
           <FAQ/>
           <BlogList/>

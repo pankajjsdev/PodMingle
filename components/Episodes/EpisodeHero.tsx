@@ -1,5 +1,5 @@
 import React from 'react'
-import { H3, P } from '../common/Typography'
+import { H1, H3, P } from '../common/Typography'
 import Section from '../common/Section'
 import Image from 'next/image'
 import AnimatedDiv from '../Animation/AnimatedDiv'
@@ -9,10 +9,10 @@ function EpisodeHero() {
     return (
         <Section>
             <div className='container space-y-8'>
-                <H3>Episodes</H3>
+                <H1>Episodes</H1>
                 <P className='lg:w-1/2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pulvinar nunc mauris lobortis etiam in cursus. Urna dolor tortor orci amet nisl integer purus risus.</P>
 
-                <div className='grid grid-cols-1 lg:grid-cols-2' >
+                <div className='grid grid-cols-1 lg:grid-cols-2 shadow  rounded-3xl' >
                     <Image
                         src={"/images/episode-hero.png"}
                         width={300}
@@ -21,7 +21,7 @@ function EpisodeHero() {
                         className='w-full h-full'
                     />
 
-                    <AnimatedDiv className="space-y-6 lg:space-y-8 lg:p-8 gap-3">
+                    <AnimatedDiv className="space-y-6 lg:space-y-8 p-4 lg:p-8">
                         <P>Business</P>
                         <H3>Ep 2 getting the first 300 customers for your web business</H3>
                         <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non facilisi eget ut sodales nec lacus egestas enim. In sed purus massa orci. Auctor fermentum, mauris urna faucibus a maecenas at fringilla mauris</P>
