@@ -7,7 +7,7 @@ function page() {
     return (
         <main>
             <div className="container my-12 lg:my-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between">
                     <div className="p-2 lg:p-12 text-center">
                         <H3>Create your account</H3>
                         <P>Sign up with</P>
@@ -27,7 +27,7 @@ function page() {
                             </form>
                         </div>
                     </div>
-                    <div className="hidden lg:flex">
+                    <div className="">
                         <Image
                             src={"/images/common/login_bg.png"}
                             width={500}
