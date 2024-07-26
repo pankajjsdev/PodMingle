@@ -38,7 +38,7 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
                 <meta name="author" content={episode.author.name} />
             </Head>
             <div className="shadow rounded-3xl p-4 space-y-4">
-                <Link href={episode.listenLink}>
+                <Link href={`/episodes/${episode.title.replaceAll(' ', '-')}`}>
                     <Image
                         src={episode.imageUrl}
                         width={373}
@@ -52,7 +52,7 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
                 </div>
                 <H4>{episode.title}</H4>
                 <div className="flex items-center justify-between">
-                    <Link className="flex items-center space-x-2" href={episode.listenLink}>
+                    <Link className="flex items-center space-x-2" href={`/episodes/${episode.title.replaceAll(' ', '-')}`}>
                         <span>Listen Now</span>
                         <Image
                             src="/images/play-btn.png"

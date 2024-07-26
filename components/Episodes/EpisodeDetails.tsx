@@ -1,7 +1,9 @@
+import Image from "next/image"
 import Section from "../common/Section"
-import { H1, P } from "../common/Typography"
+import { H1, H4, P } from "../common/Typography"
 import FAQ from "@/components/FAQ"
 import AdsOne from "@/components/landingPageCmp/AdsSections/AdsOne"
+import SocialShare from "./SocialShare"
 
 
 const detailsInfo = [
@@ -38,8 +40,8 @@ function EpisodeDetails() {
                         {
                             detailsInfo?.map((info, index) => {
                                 return (
-                                    <>
-                                        <P key={index}>{info.para}</P>
+                                    <div key={index}>
+                                        <P >{info.para}</P>
                                         <ul className="list-disc p-8">
                                             {
                                                 info?.specifications?.map((specifications, index) => {
@@ -49,17 +51,34 @@ function EpisodeDetails() {
                                                 })
                                             }
                                         </ul>
-                                    </>
+                                    </div>
                                 )
                             })
                         }
                     </div>
                 </div>
-
-                <AdsOne/>
-                <FAQ/>
-
             </div>
+            <div>
+                <Image
+                    src={"/images/common/bg-episode1.png"}
+                    width={600}
+                    height={600}
+                    alt=""
+                    className="w-full h-full"
+                />
+            </div>
+
+
+
+            <div className="container my-8">
+                <div className="flex items-center justify-between my-4">
+                    <H4>Share this post
+                    </H4>
+                    <div><span>Technology</span></div>
+                </div>
+                <SocialShare />
+            </div>
+
 
         </Section>
     )
