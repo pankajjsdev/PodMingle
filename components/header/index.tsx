@@ -9,6 +9,7 @@ const links = [
     { title: 'Home', path: '/' },
     { title: 'About', path: '/about' },
     { title: 'Episodes', path: '/episodes' },
+    { title: 'Pricing', path: '/pricing' },
     { title: 'Pages', path: '/pages' },
     { title: 'Blog', path: '/blog' }
 ]
@@ -18,15 +19,15 @@ const Header = () => {
         <header className='bg-white'>
             <div className='container  py-4 flex items-center justify-between'>
                 {/* Header logo */}
-                    <Link href="/">
+                <Link href="/">
                     <Image
-                     src="/images/logo/logo3.png"
-                     width = {120}
-                     height= {120}
-                     quality={100}
-                     alt=""
+                        src="/images/logo/logo3.png"
+                        width={120}
+                        height={120}
+                        quality={100}
+                        alt=""
                     />
-                    </Link>
+                </Link>
                 {/* Desktop Navigation and Action Buttons */}
                 <div className='lg:flex items-center space-x-8 hidden'>
                     <nav>
@@ -48,7 +49,7 @@ const Header = () => {
                 </div>
 
                 <div className='lg:hidden'>
-                <MobileNav links={links} />
+                    <MobileNav links={links} />
                 </div>
 
             </div>

@@ -2,6 +2,7 @@ import Image from "next/image"
 import { ButtonPrimary, ButtonSecondary } from "../common/Button"
 import Section from "../common/Section"
 import { H1, H2, H3, H4, P, SmallText } from "../common/Typography"
+import AnimatedHero from "../Animation/AnimateHero"
 
 const plansData = [
     {
@@ -46,13 +47,13 @@ function PricingList() {
     return (
         <Section>
             <div className="container">
-                <div className="my-6 flex flex-col items-center justify-between">
+                <AnimatedHero className="my-6 flex flex-col items-center justify-between">
                     <div className="text-center lg:w-2/3 space-y-4">
                         <H1>Affordable Solutions Tailored to Your Business Needs</H1>
                         <P>Simple, transparent pricing that grows with you. Try any plan free for 30 days.</P>
                     </div>
-                </div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                </AnimatedHero>
+                <AnimatedHero className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {
                         plansData?.map((plan, index) => {
                             return (
@@ -90,7 +91,7 @@ function PricingList() {
                             )
                         })
                     }
-                </div>
+                </AnimatedHero>
             </div>
         </Section>
     )
