@@ -12,12 +12,13 @@ const config: Config = {
         center: true,
         padding: {
           DEFAULT: '5%',
+          'px4':'20%'
         },
         screens: {
           sm: '100%',
           md: '100%',
-          lg: '1024px',
-          xl: '1280px',
+          // lg: '1024px',
+          // xl: '1280px',
         },
       },
       fontSize: {

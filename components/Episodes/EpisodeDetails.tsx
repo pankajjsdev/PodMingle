@@ -27,16 +27,19 @@ const detailsInfo = [
             "Enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.",
             "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         ]
+    },
+    {
+        image: '/images/common/bg-episode1.png'
     }
 ]
 
 function EpisodeDetails() {
     return (
         <Section>
-            <div className="container">
-                <div className="">
-                    <H1 className="text-center">Episode Description</H1>
-                    <div className="p-4">
+            <div className="container px-16 bg-whitesmoke py-16">
+                <div className="px-[16%]">
+                    <H1 className="my-4">Episode Description</H1>
+                    <div className="">
                         {
                             detailsInfo?.map((info, index) => {
                                 return (
@@ -66,6 +69,31 @@ function EpisodeDetails() {
                     alt=""
                     className="w-full h-full"
                 />
+            </div>
+
+
+            <div className="px-[16%] mt-16">
+                <H1 className="my-4">The Ep 2 of Podcast</H1>
+                <div className="">
+                    {
+                        detailsInfo?.map((info, index) => {
+                            return (
+                                <div key={index}>
+                                    <P >{info.para}</P>
+                                    <ul className="list-disc p-8">
+                                        {
+                                            info?.specifications?.map((specifications, index) => {
+                                                return (
+                                                    <li><P key={index}>{specifications}</P></li>
+                                                )
+                                            })
+                                        }
+                                    </ul>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
 
 
