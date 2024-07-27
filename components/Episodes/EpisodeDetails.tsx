@@ -49,7 +49,7 @@ function EpisodeDetails() {
                                             {
                                                 info?.specifications?.map((specifications, index) => {
                                                     return (
-                                                        <li><P key={index}>{specifications}</P></li>
+                                                        <li key={index}><P >{specifications}</P></li>
                                                     )
                                                 })
                                             }
@@ -84,7 +84,7 @@ function EpisodeDetails() {
                                         {
                                             info?.specifications?.map((specifications, index) => {
                                                 return (
-                                                    <li><P key={index}>{specifications}</P></li>
+                                                    <li key={index}><P >{specifications}</P></li>
                                                 )
                                             })
                                         }

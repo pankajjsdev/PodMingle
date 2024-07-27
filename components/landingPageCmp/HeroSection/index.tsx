@@ -3,8 +3,15 @@ import Section from "@/components/common/Section"
 import { H1, H4, P } from "@/components/common/Typography"
 import { ButtonPrimary, ButtonSecondary } from "@/components/common/Button"
 import Stats from "./Stats"
-import ImageCard from "./ImageCard"
+
+import dynamic from "next/dynamic"
 import AnimatedHero from "@/components/Animation/AnimateHero"
+import HeroUser from "@/public/images/hero1.png"
+
+const HeroOverlay = dynamic(() => import("./ImageCard"), {
+    loading: () => <p>...</p>,
+    ssr: false
+})
 
 
 function index() {
@@ -20,18 +27,19 @@ function index() {
                             <ButtonPrimary title='Subscribe' />
                             <ButtonSecondary title='Last Episode' />
                         </div>
-                         <Stats />
+                        <Stats />
                     </AnimatedHero>
                     <AnimatedHero className="relative">
                         <Image
-                            src="/images/hero1.png"
+                            src={HeroUser}
+                            priority={true}
                             width={600}
                             height={620}
                             alt=""
-                            className="bg-cover object-contain"
+                            className=""
                         />
                         {/* card that one on hero image */}
-                        <ImageCard />
+                        <HeroOverlay />
                     </AnimatedHero>
                 </div>
             </div>

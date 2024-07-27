@@ -66,7 +66,7 @@ function PricingList() {
                                         {
                                             plan.features.map((feature, index) => {
                                                 return (
-                                                    <li className="flex items-center space-x-3">
+                                                    <li key={index} className="flex items-center space-x-3">
                                                         <Image
                                                             src={"/images/common/right.svg"}
                                                             width={25}

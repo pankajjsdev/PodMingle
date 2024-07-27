@@ -20,7 +20,7 @@ function page() {
                                     <input placeholder="Email" className="border w-full py-2 px-4 rounded-full" />
                                 </div>
                                 <ButtonPrimary title="Sign in" />
-                                <Link href="/signup">You Don't have account? Sign Up</Link>
+                                <Link href="/signup">You Don&apos;t have account? Sign Up</Link>
                             </form>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link  from "next/link";
 import { ButtonPrimary } from "../common/Button";
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="container">
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-3">
                     <div className="">
-                        <Link href="/">
+                        <Link className="hover:text-yellow" href="/">
                             <Image
                                 src="/images/logo/logo.png"
                                 width={120}
@@ -22,36 +22,36 @@ const Footer = () => {
                     <div>
                         <h4 className="font-semibold">Menu</h4>
                         <ul className="mt-4 space-y-2">
-                            <li>Home</li>
-                            <li>About Us</li>
-                            <li>Episodes</li>
-                            <li>Blog</li>
-                            <li>Pricing</li>
-                            <li>Contact Us</li>
-                            <li>Sign up</li>
-                            <li>Sign in</li>
+                            <li><Link className="hover:text-yellow" href="/">Home </Link></li>
+                            <li><Link className="hover:text-yellow" href="/about">About Us </Link></li>
+                            <li><Link className="hover:text-yellow" href="/episodes">Episodes </Link></li>
+                            <li><Link className="hover:text-yellow" href="/blog">Blog </Link></li>
+                            <li><Link className="hover:text-yellow" href="/pricing">Pricing </Link></li>
+                            <li><Link className="hover:text-yellow" href="/contacts">Contact Us </Link></li>
+                            <li><Link className="hover:text-yellow" href="/signup">Sign up </Link></li>
+                            <li><Link className="hover:text-yellow" href="/signin">Sign in </Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-semibold">CMS Page</h4>
                         <ul className="mt-4 space-y-2">
-                            <li>Episodes details</li>
-                            <li>Blog details</li>
-                            <li>Team details</li>
-                            <li>Pricing details</li>
+                            <li><Link className="hover:text-yellow" href="/episodes/episode-details">Episodes details </Link></li>
+                            <li><Link className="hover:text-yellow" href="/">Blog details </Link></li>
+                            <li><Link className="hover:text-yellow" href="/">Team details </Link></li>
+                            <li><Link className="hover:text-yellow" href="/">Pricing details </Link></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-semibold">Utility Page</h4>
                         <ul className="mt-4 space-y-2">
-                            <li>Start Here</li>
-                            <li>Style Guide</li>
-                            <li>404 Not Found</li>
-                            <li>Password Protected</li>
-                            <li>Licenses</li>
-                            <li>Terms & Condition</li>
-                            <li>Privacy Policy</li>
-                            <li>Changelog</li>
+                            <li><Link className="hover:text-yellow" href="/">Start Here </Link></li>
+                            <li><Link className="hover:text-yellow" href="/">Style Guide </Link></li>
+                            <li><Link className="hover:text-yellow" href="/">404 Not Found </Link></li>
+                            <li><Link className="hover:text-yellow" href="/">Password Protected </Link></li>
+                            <li><Link className="hover:text-yellow" href="/">Licenses </Link></li>
+                            <li><Link className="hover:text-yellow" href="/terms-conditions">Terms & Condition </Link></li>
+                            <li><Link className="hover:text-yellow" href="/privacy-policy">Privacy Policy </Link></li>
+                            <li><Link className="hover:text-yellow" href="/">Changelog </Link></li>
                         </ul>
                     </div>
                     <div>
@@ -81,16 +81,16 @@ const Footer = () => {
                 <div className="mb-8 my-20 flex flex-col sm:flex-row justify-between items-center">
                     <p className="text-xs mb-4 sm:mb-0">&copy; 2024 Pod mingle. All rights reserved.</p>
                     <div className="flex space-x-6 mb-4 sm:mb-0">
-                        <a href="#" className="text-xs">Privacy Policy</a>
-                        <a href="#" className="text-xs">Terms of Service</a>
-                        <a href="#" className="text-xs">Cookies Settings</a>
+                        <Link  href="/privacy-policy" className="text-xs hover:text-yellow">Privacy Policy</Link>
+                        <Link  href="/terms-conditions" className="text-xs hover:text-yellow">Terms of Service</Link>
+                        <Link  href="#" className="text-xs hover:text-yellow">Cookies Settings</Link>
                     </div>
-                    <div className="flex space-x-4">
-                        <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook"></i></a>
-                        <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i></a>
-                        <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i></a>
-                        <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-linkedin"></i></a>
-                    </div>
+                    {/* <div className="flex space-x-4">
+                        <Link  href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook"></i></Link>
+                        <Link  href="#" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i></Link>
+                        <Link  href="#" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i></Link>
+                        <Link  href="#" className="text-gray-400 hover:text-white"><i className="fab fa-linkedin"></i></Link>
+                    </div> */}
                 </div>
             </div>
         </footer>

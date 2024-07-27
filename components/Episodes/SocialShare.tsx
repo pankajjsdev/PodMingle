@@ -27,7 +27,7 @@ function SocialShare() {
             {
                 icons?.map((icon, index) => {
                     return (
-                        <Link href={icon.link} className="p-2 bg-white shadow rounded-full  group">
+                        <Link key={index} href={icon.link} className="p-2 bg-white shadow rounded-full  group">
                             <icon.icon className="text-yellow font-bold group-hover:text-royal-blue" />
                         </Link>
                     )

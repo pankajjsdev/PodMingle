@@ -13,7 +13,7 @@ function AdsOne() {
                         <input className="bg-black-dark w-full h-14  px-4 border border-white rounded-full" placeholder="Enter your email" />
                         <ButtonPrimary title="Subscribe" className="w-full h-14" />
                     </div>
-                    <p className="text-xs">By clicking Sign Up you're confirming that you agree with our <span className="underline cursor-pointer">Terms and Conditions</span>.</p>
+                    <p className="text-xs">By clicking Sign Up you&apos;re confirming that you agree with our <span className="underline cursor-pointer">Terms and Conditions</span>.</p>
                 </div>
             </div>
 
