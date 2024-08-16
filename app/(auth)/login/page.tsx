@@ -1,9 +1,10 @@
 import { ButtonPrimary } from "@/components/common/Button"
 import { H1, H3, P } from "@/components/common/Typography"
 import Image from "next/image"
-import Link from "next/link"
+import LoginForm from "./LoginForm"
 
 function page() {
+
     return (
         <main>
             <div className="container my-12 lg:my-24">
@@ -12,16 +13,7 @@ function page() {
                         <H3>Welcome Back to your account</H3>
                         <P>Sign in with</P>
                         <div className="my-6">
-                            <form className="flex flex-col w-full space-y-6 p-8">
-                                <div className="">
-                                    <input placeholder="Name" className="border w-full py-2 px-4 rounded-full" />
-                                </div>
-                                <div className="">
-                                    <input placeholder="Email" className="border w-full py-2 px-4 rounded-full" />
-                                </div>
-                                <ButtonPrimary title="Sign in" />
-                                <Link href="/signup">You Don&apos;t have account? Sign Up</Link>
-                            </form>
+                            <LoginForm/>
                         </div>
                     </div>
                     <div className="">

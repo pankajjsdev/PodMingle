@@ -3,15 +3,21 @@ type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 interface FetchOptions {
   method?: HttpMethod;
   headers?: HeadersInit;
-  body?: BodyInit | null;
+  body?: any | null;
 }
+
+const base_url = process.env.NEXT_PUBLIC_BASE_URL
 
 async function apiFetch<T>(url: string, options: FetchOptions = {}): Promise<T> {
   const { method = 'GET', headers = {}, body = null } = options;
 
-  const response = await fetch(url, {
+  const api_url = `${base_url}/${url}`
+
+  const response = await fetch(api_url, {
     method,
+    cache:'no-cache',
     headers: {
+      Authorization:`${process.env.NEXT_PUBLIC_BASIC_AUTH}`,
       'Content-Type': 'application/json',
       ...headers,
     },

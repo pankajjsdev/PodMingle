@@ -13,9 +13,9 @@ function Index() {
       </H4>
       <div className="overflow-hidden mt-16">
         <motion.div
-          initial={{ x: 0 }}
-          animate={{ x: "-100%" }}
-          transition={{ duration: 20, ease: "linear", repeat: Infinity }}
+          initial={{ translateX: "-50%" }}
+          animate={{ translateX: "0" }}
+          transition={{ duration: 30, ease: "linear", repeat: Infinity }}
           className="flex space-x-5 opacity-50"
         >
           {
@@ -36,16 +36,8 @@ function Index() {
                     alt=""
                     className="bg-contain"
                   />
-
                   <Image
                     src={"/images/common/brand3.png"}
-                    width={180}
-                    height={80}
-                    alt=""
-                    className="bg-contain"
-                  />
-                  <Image
-                    src={"/images/common/brand4.png"}
                     width={180}
                     height={80}
                     alt=""
