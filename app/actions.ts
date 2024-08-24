@@ -1,6 +1,6 @@
 "use server";
 
-import apiFetch from "@/services/api";
+import { redirect } from "next/navigation";
 import { createSession, getSession } from "@/utils/lib/session";
 
 // Define a type for the response structure
@@ -10,7 +10,7 @@ type SigninResponse = {
   error?: any;
 };
 
-export async function signin(formData: FormData): Promise<any> {
+export async function signin(formData: FormData): Promise<SigninResponse> {
   const endpoint = "user/login";
   
   // Extract email and password from formData
@@ -23,46 +23,36 @@ export async function signin(formData: FormData): Promise<any> {
     };
   }
 
-  // Prepare the request body
-  const body = JSON.stringify({
-    email,
-    password,
-  });
+  const body = JSON.stringify({ email, password });
 
   try {
-      const api_url = `${process.env.NEXT_PUBLIC_API_BASE_URI}${endpoint}`
-    let user1 = await fetch(api_url, {
+    const api_url = `${process.env.NEXT_PUBLIC_API_BASE_URI}${endpoint}`;
+    
+    const response = await fetch(api_url, {
       headers: {
-        Authorization:`${process.env.NEXT_PUBLIC_API_BASIC_AUTH}`,
+        Authorization: `${process.env.NEXT_PUBLIC_API_BASIC_AUTH}`,
         'Content-Type': 'application/json',
       },
-
       method: 'POST',
-      body:JSON.stringify({
-        email,
-        password,
-      })
-    })
+      body,
+    });
 
-   let user = await user1.json()
+    const user = await response.json();
 
-    if (!user) {
+    if (!response.ok || !user) {
       return {
         message: "Invalid credentials. Please try again.",
       };
     }
 
+    createSession(user?.data?.token);
+    console.log("User data:", user);
 
-    createSession(user?.data.token)
-    console.log("dsahjdnsajdn", user)
+    const token = await getSession();
+    console.log("Session token:", token);
 
-   const gettoken =  await getSession()
-
-   console.log("gettoken", gettoken)
-
-    // TODO:
-    // 1. Create user session
-    // 2. Redirect user (e.g., using Next.js's `redirect` function)
+    // Redirect to the homepage after successful sign-in
+    redirect("/");
 
     return user;
   } catch (error) {
